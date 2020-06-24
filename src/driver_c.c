@@ -35,7 +35,7 @@ int main (int argc, char *argv[])
       printf("Can not find file %s\n",argv[1]);
       exit(1);
   }
-  while((n = fscanf(in,"%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %s",
+  while((n = fscanf(in,"%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %s %s",
             &piover4,&vmin,&vmax,&tmin,&tmax,&tresh,&ffact,&taperl,&snr,&fmatch,
             name,phvelname)) != EOF) { /* start main loop      */
   strcpy(root,name);
