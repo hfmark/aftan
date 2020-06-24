@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
  static  int nrow, ncol, npred;
  static  double prpvper[300],prpvvel[300]; /* phase vel prediction files  */
 
-  char  *p,name[160],buf[200],phvelname[160],root[160];
+  char  *p,name[160],buf[200],*phvelname,root[160];
   FILE  *in, *inv;
   int   i;
   int   sac = 1; /* =1 - SAC, =0 - ftat files    */
