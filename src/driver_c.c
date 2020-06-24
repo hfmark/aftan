@@ -20,7 +20,7 @@ int main (int argc, char *argv[])
  static  int nrow, ncol, npred;
  static  double prpvper[300],prpvvel[300]; /* phase vel prediction files  */
 
-  char  *p,name[160],buf[200],*phvelname,root[160];
+  char  *p,name[160],buf[200],phvelname[160],root[160];
   FILE  *in, *inv;
   int   i;
   int   sac = 1; /* =1 - SAC, =0 - ftat files    */
@@ -37,15 +37,15 @@ int main (int argc, char *argv[])
   }
   while((n = fscanf(in,"%lf %lf %lf %lf %lf %lf %lf %lf %lf %lf %s",
             &piover4,&vmin,&vmax,&tmin,&tmax,&tresh,&ffact,&taperl,&snr,&fmatch,
-            name)) != EOF) { /* start main loop      */
+            name,phvelname)) != EOF) { /* start main loop      */
   strcpy(root,name);
   p = strrchr(root,'.');
   *(p+1) = '\0';
   //strcpy(phvelname,root);
   //strcat(phvelname,"SAC_PHP");
-  phvelname="phvel_ref/ak135_phvel.dat";
+  //phvelname="phvel_ref/ak135_phvel.dat";
 
-      if(n == 0 || n != 11) break;
+      if(n == 0 || n != 12) break;
 
       printf("pi/4= %4.1lf, vmin= %lf, vmax= %lf, tmin= %lf, tmax= %lf\n",
               piover4,vmin,vmax,tmin,tmax);
