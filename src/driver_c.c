@@ -41,8 +41,9 @@ int main (int argc, char *argv[])
   strcpy(root,name);
   p = strrchr(root,'.');
   *(p+1) = '\0';
-  strcpy(phvelname,root);
-  strcat(phvelname,"SAC_PHP");
+  //strcpy(phvelname,root);
+  //strcat(phvelname,"SAC_PHP");
+  phvelname="phvel_rev/ak135_phvel.dat";
 
       if(n == 0 || n != 11) break;
 
