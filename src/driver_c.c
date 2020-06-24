@@ -43,7 +43,7 @@ int main (int argc, char *argv[])
   *(p+1) = '\0';
   //strcpy(phvelname,root);
   //strcat(phvelname,"SAC_PHP");
-  phvelname="phvel_rev/ak135_phvel.dat";
+  phvelname="phvel_ref/ak135_phvel.dat";
 
       if(n == 0 || n != 11) break;
 
